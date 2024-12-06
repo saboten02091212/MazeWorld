@@ -11,6 +11,14 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.Editor.dll:
+    - TMPro.EditorUtilities.TMP_SettingsEditor
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     Unity.XR.Management.dll:
@@ -18,6 +26,7 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.Management.XRManagerSettings
     Unity.XR.Oculus.dll:
     - Unity.XR.Oculus.OculusLoader
+    - Unity.XR.Oculus.OculusSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -25,6 +34,8 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
     VRC.SDKBase.Editor.dll:
     - VRCSdkControlPanel
     VRC.Udon.Editor.dll:
@@ -40,10 +51,25 @@ ScriptsOnlyBuild:
     - VRCProjectSettings
     VRCSDK3.dll:
     - VRC.SDK3.Components.VRCSceneDescriptor
+    - VRC.SDK3.Components.VRCUiShape
     VRCSDKBase.dll:
     - VRC.SDKBase.Validation.Performance.Stats.AvatarPerformanceStatsLevel
     - VRC.SDKBase.Validation.Performance.Stats.AvatarPerformanceStatsLevelSet
   serializedClasses:
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
+    - TMPro.KerningTable
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.VertexGradient
+    UnityEngine.CoreModule:
+    - UnityEngine.Events.PersistentCallGroup
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.GlyphRect
+    UnityEngine.UI:
+    - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     VRCSDKBase:
     - VRC.SDKBase.Network.NetworkIDPair
   methodsToPreserve: []
@@ -80,26 +106,48 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 17920}
+      Script: {instanceID: 16816}
     - Class: 114
-      Script: {instanceID: 17930}
+      Script: {instanceID: 17922}
     - Class: 114
-      Script: {instanceID: 20022}
+      Script: {instanceID: 17932}
     - Class: 114
-      Script: {instanceID: 20698}
+      Script: {instanceID: 18114}
     - Class: 114
-      Script: {instanceID: 21382}
+      Script: {instanceID: 20026}
     - Class: 114
-      Script: {instanceID: 21694}
+      Script: {instanceID: 20506}
     - Class: 114
-      Script: {instanceID: 23452}
+      Script: {instanceID: 20702}
+    - Class: 114
+      Script: {instanceID: 20708}
+    - Class: 114
+      Script: {instanceID: 21348}
+    - Class: 114
+      Script: {instanceID: 21390}
+    - Class: 114
+      Script: {instanceID: 21702}
+    - Class: 114
+      Script: {instanceID: 23750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 540882762544409cc4530e60db00e951
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: e987953190eb4c12cf19df790566dc2c
@@ -114,16 +162,40 @@ ScriptsOnlyBuild:
     className: SerializedUdonProgramAsset
   - hash:
       serializedVersion: 2
+      Hash: 5a4aa2850fe11587f47e34c270c7fd22
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
       Hash: 83d7a967ea9b430906a16df823c2ef60
     assemblyName: VRC.Udon
     namespaceName: VRC.Udon
     className: UdonBehaviour
   - hash:
       serializedVersion: 2
+      Hash: 17f82e3e7d8f8b07a270a4aad9bfe79d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
       Hash: b19f8151adc1db9184b5dd220dedc97c
     assemblyName: VRCSDK3.dll
     namespaceName: VRC.SDK3.Components
     className: VRCSceneDescriptor
+  - hash:
+      serializedVersion: 2
+      Hash: 3332c17a59502852aed71e9e25ee638d
+    assemblyName: VRCSDK3.dll
+    namespaceName: VRC.SDK3.Components
+    className: VRCUiShape
+  - hash:
+      serializedVersion: 2
+      Hash: 9637dcdf3068a91dfe653e61bb82f13d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
       Hash: 3607af82c896f922ab108a0c63b749dd

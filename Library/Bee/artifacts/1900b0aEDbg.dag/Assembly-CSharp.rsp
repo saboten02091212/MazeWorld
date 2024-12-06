@@ -422,6 +422,8 @@
 "Assets/Scripts/MazeCreater.cs"
 "Assets/Scripts/MazeData.cs"
 "Assets/Scripts/MazeUtility.cs"
+"Assets/Scripts/Object/TimerStart.cs"
+"Assets/Scripts/Object/TimerStop.cs"
 "Assets/UdonSharp/UtilityScripts/BoneFollower.cs"
 "Assets/UdonSharp/UtilityScripts/InteractToggle.cs"
 "Assets/UdonSharp/UtilityScripts/PlayerModSetter.cs"

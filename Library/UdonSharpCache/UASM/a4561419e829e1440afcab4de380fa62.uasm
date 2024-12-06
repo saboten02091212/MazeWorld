@@ -1,0 +1,185 @@
+.data_start
+    .export textMeshStart
+    .export textMeshGoal
+    .sync startTick, none
+    .sync goalTick, none
+    __refl_typeid: %SystemInt64, null
+    __refl_typename: %SystemString, null
+    __intnl_returnJump_SystemUInt32_0: %SystemUInt32, null
+    textMeshStart: %TMProTextMeshProUGUI, null
+    textMeshGoal: %TMProTextMeshProUGUI, null
+    startTick: %SystemInt64, null
+    goalTick: %SystemInt64, null
+    __const_SystemUInt32_0: %SystemUInt32, null
+    __const_SystemInt64_0: %SystemInt64, null
+    __gintnl_SystemUInt32_0: %SystemUInt32, null
+    __const_SystemString_0: %SystemString, null
+    __const_SystemBoolean_0: %SystemBoolean, null
+    __this_UnityEngineGameObject_0: %UnityEngineGameObject, this
+    __this_VRCUdonUdonBehaviour_0: %VRCUdonUdonBehaviour, this
+    __this_VRCUdonUdonBehaviour_1: %VRCUdonUdonBehaviour, this
+    __intnl_SystemBoolean_0: %SystemBoolean, null
+    __intnl_SystemBoolean_1: %SystemBoolean, null
+    __lcl_elapsedTime_SystemDateTime_0: %SystemDateTime, null
+    __intnl_SystemBoolean_2: %SystemBoolean, null
+    __lcl_timeSpan_SystemTimeSpan_0: %SystemTimeSpan, null
+    __intnl_SystemDateTime_0: %SystemDateTime, null
+    __lcl_timerStr_SystemString_0: %SystemString, null
+    __intnl_VRCSDKBaseVRCPlayerApi_0: %VRCSDKBaseVRCPlayerApi, null
+    __intnl_SystemBoolean_3: %SystemBoolean, null
+    __intnl_SystemBoolean_4: %SystemBoolean, null
+    __intnl_SystemDateTime_1: %SystemDateTime, null
+    __intnl_VRCSDKBaseVRCPlayerApi_1: %VRCSDKBaseVRCPlayerApi, null
+    __intnl_VRCSDKBaseVRCPlayerApi_2: %VRCSDKBaseVRCPlayerApi, null
+    __intnl_SystemBoolean_5: %SystemBoolean, null
+    __intnl_SystemBoolean_6: %SystemBoolean, null
+    __intnl_SystemDateTime_2: %SystemDateTime, null
+    __intnl_VRCSDKBaseVRCPlayerApi_3: %VRCSDKBaseVRCPlayerApi, null
+.data_end
+.code_start
+    .export _interact
+    _interact:
+        PUSH, __const_SystemUInt32_0
+# 
+# TimerStart.Interact()
+# 
+        PUSH, __const_SystemInt64_0
+        PUSH, startTick
+        PUSH, __intnl_SystemBoolean_0
+        EXTERN, "SystemInt64.__op_Inequality__SystemInt64_SystemInt64__SystemBoolean"
+        PUSH, __intnl_SystemBoolean_0
+        JUMP_IF_FALSE, 0x0000004c
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+        PUSH, __gintnl_SystemUInt32_0
+# Calling TimerStart.CountStart()
+        JUMP, 0x000001E0
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+    .export _fixedUpdate
+    _fixedUpdate:
+        PUSH, __const_SystemUInt32_0
+# 
+# TimerStart.FixedUpdate()
+# 
+        PUSH, __const_SystemInt64_0
+        PUSH, startTick
+        PUSH, __intnl_SystemBoolean_1
+        EXTERN, "SystemInt64.__op_Equality__SystemInt64_SystemInt64__SystemBoolean"
+        PUSH, __intnl_SystemBoolean_1
+        JUMP_IF_FALSE, 0x000000d0
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+        PUSH, __lcl_elapsedTime_SystemDateTime_0
+        EXTERN, "SystemDateTime.__get_Now__SystemDateTime"
+        PUSH, __const_SystemInt64_0
+        PUSH, goalTick
+        PUSH, __intnl_SystemBoolean_2
+        EXTERN, "SystemInt64.__op_Inequality__SystemInt64_SystemInt64__SystemBoolean"
+        PUSH, __intnl_SystemBoolean_2
+        JUMP_IF_FALSE, 0x00000128
+        PUSH, goalTick
+        PUSH, __lcl_elapsedTime_SystemDateTime_0
+        EXTERN, "SystemDateTime.__ctor__SystemInt64__SystemDateTime"
+        PUSH, startTick
+        PUSH, __intnl_SystemDateTime_0
+        EXTERN, "SystemDateTime.__ctor__SystemInt64__SystemDateTime"
+        PUSH, __lcl_elapsedTime_SystemDateTime_0
+        PUSH, __intnl_SystemDateTime_0
+        PUSH, __lcl_timeSpan_SystemTimeSpan_0
+        EXTERN, "SystemDateTime.__op_Subtraction__SystemDateTime_SystemDateTime__SystemTimeSpan"
+        PUSH, __lcl_timeSpan_SystemTimeSpan_0
+        PUSH, __const_SystemString_0
+        PUSH, __lcl_timerStr_SystemString_0
+        EXTERN, "SystemTimeSpan.__ToString__SystemString__SystemString"
+        PUSH, textMeshStart
+        PUSH, __lcl_timerStr_SystemString_0
+        EXTERN, "TMProTextMeshProUGUI.__set_text__SystemString__SystemVoid"
+        PUSH, textMeshGoal
+        PUSH, __lcl_timerStr_SystemString_0
+        EXTERN, "TMProTextMeshProUGUI.__set_text__SystemString__SystemVoid"
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+    .export CountStart
+    CountStart:
+        PUSH, __const_SystemUInt32_0
+# 
+# TimerStart.CountStart()
+# 
+        PUSH, __intnl_VRCSDKBaseVRCPlayerApi_0
+        EXTERN, "VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi"
+        PUSH, __intnl_VRCSDKBaseVRCPlayerApi_0
+        PUSH, __this_UnityEngineGameObject_0
+        PUSH, __intnl_SystemBoolean_3
+        EXTERN, "VRCSDKBaseVRCPlayerApi.__IsOwner__UnityEngineGameObject__SystemBoolean"
+        PUSH, __const_SystemBoolean_0
+        PUSH, __intnl_SystemBoolean_3
+        PUSH, __intnl_SystemBoolean_4
+        EXTERN, "SystemBoolean.__op_Equality__SystemBoolean_SystemBoolean__SystemBoolean"
+        PUSH, __intnl_SystemBoolean_4
+        JUMP_IF_FALSE, 0x00000268
+        PUSH, __intnl_VRCSDKBaseVRCPlayerApi_1
+        EXTERN, "VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi"
+        PUSH, __intnl_VRCSDKBaseVRCPlayerApi_1
+        PUSH, __this_UnityEngineGameObject_0
+        EXTERN, "VRCSDKBaseNetworking.__SetOwner__VRCSDKBaseVRCPlayerApi_UnityEngineGameObject__SystemVoid"
+        PUSH, __intnl_SystemDateTime_1
+        EXTERN, "SystemDateTime.__get_Now__SystemDateTime"
+        PUSH, __intnl_SystemDateTime_1
+        PUSH, startTick
+        EXTERN, "SystemDateTime.__get_Ticks__SystemInt64"
+        PUSH, __this_VRCUdonUdonBehaviour_0
+        EXTERN, "VRCUdonCommonInterfacesIUdonEventReceiver.__RequestSerialization__SystemVoid"
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+    .export CountStop
+    CountStop:
+        PUSH, __const_SystemUInt32_0
+# 
+# TimerStart.CountStop()
+# 
+        PUSH, __intnl_VRCSDKBaseVRCPlayerApi_2
+        EXTERN, "VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi"
+        PUSH, __intnl_VRCSDKBaseVRCPlayerApi_2
+        PUSH, __this_UnityEngineGameObject_0
+        PUSH, __intnl_SystemBoolean_5
+        EXTERN, "VRCSDKBaseVRCPlayerApi.__IsOwner__UnityEngineGameObject__SystemBoolean"
+        PUSH, __const_SystemBoolean_0
+        PUSH, __intnl_SystemBoolean_5
+        PUSH, __intnl_SystemBoolean_6
+        EXTERN, "SystemBoolean.__op_Equality__SystemBoolean_SystemBoolean__SystemBoolean"
+        PUSH, __intnl_SystemBoolean_6
+        JUMP_IF_FALSE, 0x00000358
+        PUSH, __intnl_VRCSDKBaseVRCPlayerApi_3
+        EXTERN, "VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi"
+        PUSH, __intnl_VRCSDKBaseVRCPlayerApi_3
+        PUSH, __this_UnityEngineGameObject_0
+        EXTERN, "VRCSDKBaseNetworking.__SetOwner__VRCSDKBaseVRCPlayerApi_UnityEngineGameObject__SystemVoid"
+        PUSH, __intnl_SystemDateTime_2
+        EXTERN, "SystemDateTime.__get_Now__SystemDateTime"
+        PUSH, __intnl_SystemDateTime_2
+        PUSH, goalTick
+        EXTERN, "SystemDateTime.__get_Ticks__SystemInt64"
+        PUSH, __this_VRCUdonUdonBehaviour_1
+        EXTERN, "VRCUdonCommonInterfacesIUdonEventReceiver.__RequestSerialization__SystemVoid"
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+        PUSH, __intnl_returnJump_SystemUInt32_0
+        COPY
+        JUMP_INDIRECT, __intnl_returnJump_SystemUInt32_0
+.code_end
